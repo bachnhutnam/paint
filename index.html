@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+	<div id="wrap">
+		<div class="title"><h2>PAINT</h2></div>
+
+		<div class="paint">
+			
+			<div id="tools">
+				<input onInput="draw_width=this.value" type="range" class="pen-size" min="1" max="50">
+				<input onInput="draw_color=this.value" type="color" class="color-option">
+
+				<button onclick="changeColor()" class="color-option" style="background: red;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: green;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: orange;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: yellow;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: blue;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: purple;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: black;"></button>
+				<button onclick="changeColor()" class="color-option" style="background: rgb(250, 167, 181);"></button>
+
+				<button onclick="reset()">Clear</button>
+				<a id="download" download="image.png">
+					<button type="button" onclick="download()">Download</button>
+				</a>
+			</div>
+
+			<canvas id="canvas"></canvas>
+
+		</div>
+	</div>
+    
+	<script type="text/javascript" src="./paint.js"></script>
+</body>
+</html>
